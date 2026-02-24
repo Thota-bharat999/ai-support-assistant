@@ -56,13 +56,30 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
-      <Header newChat={newChat}/>
-      <ChatWindow
-        messages={messages}
-        loading={loading}
-      />
-      <ChatInput onSend={handleSend}/>
+    <div className="h-screen flex flex-col bg-gray-100">
+
+      {/* HEADER */}
+      <header className="flex justify-between items-center
+        px-4 md:px-8 py-4 bg-white shadow-sm">
+
+        <h1 className="font-semibold text-lg">
+          AI Support Assistant
+        </h1>
+
+        <button onClick={newChat} className="bg-blue-500 text-white
+          px-4 py-2 rounded-lg">
+          New Chat
+        </button>
+      </header>
+
+      {/* CHAT AREA */}
+      <div className="flex-1 overflow-hidden">
+        <ChatWindow messages={messages} loading={loading} />
+      </div>
+
+      {/* INPUT */}
+      <ChatInput onSend={handleSend} />
+
     </div>
   );
 }

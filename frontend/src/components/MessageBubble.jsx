@@ -4,17 +4,12 @@ export default function MessageBubble({ msg }) {
 
   return (
     <div
-      className={`flex ${
-        isUser ? "justify-end" : "justify-start"
-      }`}
-    >
-      <div
- className={`p-3 rounded-lg
- max-w-[70%]
+ className={` px-4 py-3 rounded-2xl
+ max-w-[85%] md:max-w-[70%]
  break-words
  ${
    isUser
-   ? "bg-blue-500 text-white"
+   ? "ml-auto bg-blue-500 text-white"
    : "bg-white shadow"
  }`}
 >
@@ -24,7 +19,6 @@ export default function MessageBubble({ msg }) {
           {new Date(msg.created_at)
             .toLocaleTimeString()}
         </span>
-      </div>
     </div>
   );
 }

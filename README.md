@@ -252,7 +252,8 @@ No hallucinated responses are allowed.
 
 ### Frontend
 
-* Vercel / Netlify
+*Netlify
+frontendUrl:https://ai-supportassistant.netlify.app/
 
 ### Backend
 

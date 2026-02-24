@@ -5,21 +5,30 @@ export default function ChatWindow({
   loading
 }) {
   return (
-    <div className=" flex-1
+
+    <div className="
+      h-full
       overflow-y-auto
       overflow-x-hidden
-      p-4
-      space-y-4
-      bg-gray-100">
-      {(Array.isArray(messages) ? messages : []).map((m, i) => (
-        <MessageBubble key={i} msg={m}/>
-      ))}
+      px-3
+      md:px-6
+      py-4
+    ">
 
-      {loading && (
-        <p className="text-gray-500">
-          AI is typing...
-        </p>
-      )}
+      <div className="
+        max-w-4xl
+        mx-auto
+        space-y-4
+      ">
+        {(Array.isArray(messages) ? messages : []).map((m, i) => (
+          <MessageBubble key={i} msg={m}/>
+        ))}
+
+        {loading && (
+          <p>AI typing...</p>
+        )}
+      </div>
+
     </div>
   );
 }
