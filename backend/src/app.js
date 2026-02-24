@@ -12,6 +12,10 @@ app.use(limiter);
 
 app.use("/api", chatRoutes);
 
+app.get("/", (req, res) => {
+  res.send("✅ AI Support Assistant Backend Running");
+});
+
 app.use(errorHandler);
 
 export default app;

@@ -256,7 +256,7 @@ No hallucinated responses are allowed.
 
 ### Backend
 
-* Render / Railway
+BackendUrl:https://ai-support-assistant-6k6i.onrender.com
 
 Environment variables must be configured in deployment dashboard.
 
